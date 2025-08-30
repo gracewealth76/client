@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0d1b2a;
+      color: white;
+      padding: 15px 40px;
+      position: sticky;
+      top:0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #f4a261;
+    }
+
+        /* nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0d1b2a;
+            color: white;
+            width: 100%;
+            max-width: 100%;
+            padding: px 40px;
+            position: sticky;
+            top:0;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 12px 24px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #f4a261;
+        } */
+
+        nav h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .hero-contact {
+            padding: 100px 20px;
+            text-align: center;
+            /* min-height: 45vh; */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("images/contact-hero.jpg") center/cover no-repeat;
+            color: #fff;
+        }
+
+        .hero-contact h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero-contact p {
+            font-size: 1.2rem;
+
+        }
+
+        .contact-section {
+           padding: 60px 20px;
+           background: #f9f9f9;
+           /* text-align: center; 
+           align-items: center; */
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .contact-info h2, .contact-form h2{
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #004aad;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        .contact-info li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .contact-form form { 
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* padding: 10px; */
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        .contact-form input,
+        .contact-form textarea:focus {
+            border-color: #004aad;
+            /* border-block-end-color: #004aad; */
+        }
+
+        .contact-form button {
+            padding: 12px ;
+            border: none;
+            border-radius: 8px;
+            background: #004aad;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #00327a;
+        }
+/* 
+        .map-section {
+            margin-top: 40px;
+            background-color:#004aad;
+        } */
+
+        footer {
+            text-align: center;
+            background-color: #00327a;
+            padding: 10px;
+            color: whitesmoke;
+        }
+/* GENERAL RESSET FOR MOBILE */
+    body {
+    font-size: 16px; Default
+    font-weight: bold; 
+ }
+
+@media (max-width: 768px){
+  body {
+    font-size: 14px; /* Smaller font on tablets */
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  nav .logo {
+    margin-right: 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    /* gap: 15px; */ /* Spacing between links */
+    /* flex-wrap: wrap; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 0 2.5px;
+    font-weight: 500;
+    font-size: 16px;
+
+  }
+
+  }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><h1>NCI</h1></a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="signin-page.html">Sign in</a></li>
+                <li><a href="Signup-page.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- hero set -->
+
+    <section class="hero-contact">
+        <div class="hero-text">
+            <h1>Contact Us</h1>
+            <p>We're here to answer your questions and guide your journey.</p>
+        </div>
+    </section>
+
+    <!-- contact form  -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+
+            <!-- cont-info -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Reach out to us for inquiries or enrollment.</p>
+                <ul>
+                    <li><strong>📍 Address:</strong> 123 loerjsjskkkkkk,jdsdujj</li>
+                    <li><strong>&phone; Phone</strong> +234 800 363 2882</li>
+                    <li><strong>✉️ Email</strong> info@nci.com</li>
+                </ul>
+            </div>
+
+            <!-- contact form -->
+
+            <div class="contact-form">
+                <h2>Send Us a message</h2>
+                <form action="">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" id="" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+     <!-- map  -->
+
+    <section class="map-section">
+        <iframe src="#" frameborder="0"></iframe>
+     </section>
+     
+     <!-- Footer -->
+  <footer>
+    <p>© 2025 Noble Computer Institute | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
